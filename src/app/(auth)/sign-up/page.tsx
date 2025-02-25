@@ -1,7 +1,7 @@
 const SignUpPage = () => {
     return ( 
         <div>
-            Sign up page..
+            Sign up page../git test
         </div>
      );
 }
