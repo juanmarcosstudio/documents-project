@@ -15,7 +15,9 @@ export const Editor = () => {
         },
     extensions: [
         StarterKit,
-        TaskItem,
+        TaskItem.configure({
+            nested: true,
+        }),
         TaskList,
     ],
     content: '<p>Hello World! 🌎️</p>',
