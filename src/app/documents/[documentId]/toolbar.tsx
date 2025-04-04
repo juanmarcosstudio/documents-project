@@ -1,6 +1,6 @@
 "use client";
 
-import { LucideIcon, PrinterIcon, Redo2Icon, SpellCheckIcon, Undo2Icon } from "lucide-react";
+import { BoldIcon, LucideIcon, PrinterIcon, Redo2Icon, SpellCheckIcon, Undo2Icon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
 
@@ -60,6 +60,11 @@ export const Toolbar = () => {
                     const current = editor?.view.dom.getAttribute("spellcheck");
                     editor?.view.dom.setAttribute("spellcheck", current === "false" ? "true" : "false")
                 }
+            },
+            {
+                label: "Bold",
+                icon: BoldIcon,
+                onClick: () => editor?.chain().focus().toggleBold().run(),
             }
         ],
     ];
